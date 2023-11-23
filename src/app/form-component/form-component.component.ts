@@ -9,6 +9,9 @@ export class FormComponentComponent {
   name: string = '';
   email: string = '';
   message: string = '';
+  // name, email, message -->  interface
+
+
   isSubmitted: boolean = false;
   messages: Array<any> = [];
 
@@ -21,5 +24,9 @@ export class FormComponentComponent {
       'message': this.message
     })    
     console.log(this.messages)
+  }
+
+  deleteMessage(index: number):void {
+    this.messages.splice(index, 1)
   }
 }
